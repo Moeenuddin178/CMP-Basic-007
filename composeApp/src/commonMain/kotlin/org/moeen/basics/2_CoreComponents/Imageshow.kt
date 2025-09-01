@@ -24,6 +24,7 @@ import androidx.navigation.NavController
 import cmp_basic_007.composeapp.generated.resources.Res
 import cmp_basic_007.composeapp.generated.resources.news
 import org.jetbrains.compose.resources.painterResource
+import org.moeen.basics.Components.BackButton
 
 @Composable
 fun Imageshow(navController: NavController) {
@@ -67,12 +68,7 @@ fun Imageshow(navController: NavController) {
 
     }
 
-    Button(
-        onClick = {navController.popBackStack()},
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        Text(text = "← Back to Home")
-    }
+      BackButton(navController)
 }
 
 

@@ -13,6 +13,7 @@ import androidx.navigation.NavController
 import cmp_basic_007.composeapp.generated.resources.Fruit
 import cmp_basic_007.composeapp.generated.resources.Res
 import org.jetbrains.compose.resources.stringResource
+import org.moeen.basics.Components.BackButton
 import org.moeen.basics.theme.Orange
 
 
@@ -27,12 +28,7 @@ fun TextAccees(navController: NavController) {
         Text(text = stringResource(Res.string.Fruit), fontSize = 40.sp, color = Orange)
 
     }
-    Button(
-        onClick = { navController.popBackStack() },
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        Text(text = "← Back to Home")
-    }
+    BackButton(navController)
 
 }
 

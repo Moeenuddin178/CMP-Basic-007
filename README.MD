@@ -1,29 +1,44 @@
-# Compose Multiplatform Application
+# CMP-Basic-007
 
-## Before running!
- - check your system with [KDoctor](https://github.com/Kotlin/kdoctor)  
- - install JDK 17 or higher on your machine  
- - add `local.properties` file to the project root and set a path to Android SDK there  
+A Kotlin Multiplatform Mobile (KMM) project showcasing various UI components and examples.
 
-### Android
-To run the application on android device/emulator:  
- - open project in Android Studio and run imported android run configuration  
+## Project Structure
 
-To build the application bundle:  
- - run `./gradlew :composeApp:assembleDebug`  
- - find `.apk` file in `composeApp/build/outputs/apk/debug/composeApp-debug.apk`  
+- `composeApp` - Main application module with shared code for Android and iOS
+- `iosApp` - iOS specific code
+- `Examples` - Example implementations like Login Form UI
 
-Run android UI tests on the connected device: `./gradlew :composeApp:connectedDebugAndroidTest`
+## Scripts
 
-### Desktop
-Run the desktop application: `./gradlew :composeApp:run`  
-Run the desktop **hot reload** application: `./gradlew :composeApp:hotRunJvm`  
-Run desktop UI tests: `./gradlew :composeApp:jvmTest`  
+This project includes two helpful scripts for development:
 
-### iOS
-To run the application on iPhone device/simulator:  
- - Open `iosApp/iosApp.xcproject` in Xcode and run standard configuration  
- - Or use [Kotlin Multiplatform Mobile plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile) for Android Studio  
+### build_and_run.sh
 
-Run iOS simulator UI tests: `./gradlew :composeApp:iosSimulatorArm64Test`  
+A simple script that builds, installs, and launches the app on a connected Android device or emulator.
 
+Usage:
+```bash
+./build_and_run.sh
+```
+
+### run_app.sh
+
+A continuous monitoring script that watches for file changes and automatically rebuilds and runs the app.
+
+Usage:
+```bash
+./run_app.sh
+```
+
+To stop the script, press `Ctrl+C`.
+
+## Development
+
+Make sure you have an Android emulator running or an Android device connected before running these scripts.
+
+The scripts will:
+1. Build the app using Gradle
+2. Install the app on the connected device/emulator
+3. Launch the app
+
+The continuous script will monitor for any changes to `.kt` files and automatically rebuild and reinstall the app when changes are detected.

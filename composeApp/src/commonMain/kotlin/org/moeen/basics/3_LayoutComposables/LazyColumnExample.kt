@@ -9,24 +9,19 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import org.moeen.basics.Components.BackButton
 
 @Composable
 fun LazyColumnExample(navController: NavController) {
 
     Column {
-        Button(
-            onClick = {navController.popBackStack()},
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text(text = "← Back to Home")
-        }
+        BackButton(navController)
         Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center

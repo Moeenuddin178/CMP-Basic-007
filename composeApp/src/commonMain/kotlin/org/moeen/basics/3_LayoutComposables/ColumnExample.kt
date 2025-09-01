@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -15,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import org.moeen.basics.Components.BackButton
 
 // 1. Column, it allows you to place its children in a vertical sequence.
 
@@ -22,12 +22,7 @@ import androidx.navigation.NavController
 fun ColumnExample(navController: NavController) {
 
     Column {
-        Button(
-            onClick = {navController.popBackStack()},
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text(text = "← Back to Home")
-        }
+        BackButton(navController)
         Column(
 
             modifier = Modifier.fillMaxWidth()

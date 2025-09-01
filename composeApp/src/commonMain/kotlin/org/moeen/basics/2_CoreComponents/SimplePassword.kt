@@ -14,12 +14,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.navigation.NavController
 
 
 // Text With Password
 
 @Composable
-fun SimplePassword() {
+fun SimplePassword(navController: NavController) {
 
     var password by rememberSaveable {
         mutableStateOf("")

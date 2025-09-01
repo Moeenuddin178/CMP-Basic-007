@@ -43,7 +43,7 @@ kotlin {
             implementation(libs.coil)
             implementation(libs.coil.network.ktor)
             implementation(libs.kotlinx.datetime)
-            implementation(libs.materialKolor)
+        //    implementation(libs.materialKolor)
             implementation(libs.kotlinx.serialization.json)
           //  implementation(libs.materialicons)
             implementation("org.jetbrains.compose.material:material-icons-extended:1.6.10") // 👈 Add this
@@ -59,6 +59,7 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.uiTooling)
             implementation(libs.androidx.activityCompose)
+
         }
 
         jvmMain.dependencies {

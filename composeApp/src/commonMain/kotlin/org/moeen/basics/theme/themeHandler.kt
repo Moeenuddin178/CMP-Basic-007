@@ -32,7 +32,8 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
-import cmp_basic_007.composeapp.generated.resources.IndieFlower_Regular
+import androidx.navigation.NavController
+import cmp_basic_007.composeapp.generated.resources.IndieFlowerRegular
 import cmp_basic_007.composeapp.generated.resources.Res
 import cmp_basic_007.composeapp.generated.resources.cyclone
 import cmp_basic_007.composeapp.generated.resources.ic_cyclone
@@ -49,7 +50,7 @@ import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.resources.vectorResource
 
 @Composable
-fun themeHandler (){
+fun themeHandler (navController: NavController){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -59,7 +60,7 @@ fun themeHandler (){
     ) {
         Text(
             text = stringResource(Res.string.cyclone),
-            fontFamily = FontFamily(Font(Res.font.IndieFlower_Regular)),
+            fontFamily = FontFamily(Font(Res.font.IndieFlowerRegular)),
             style = MaterialTheme.typography.displayLarge
         )
 

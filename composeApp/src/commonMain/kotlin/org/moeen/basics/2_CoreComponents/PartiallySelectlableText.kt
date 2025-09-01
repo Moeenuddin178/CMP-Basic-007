@@ -12,15 +12,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
+import org.moeen.basics.Components.BackButton
 
 @Composable
 fun PartiallySelectlableText(navController: NavController) {
-    Button(
-        onClick = {navController.popBackStack()},
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        Text(text = "← Back to Home")
-    }
+      BackButton(navController)
     Box(
         modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center
     ) {

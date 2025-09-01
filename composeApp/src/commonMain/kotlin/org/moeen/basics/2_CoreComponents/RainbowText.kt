@@ -14,6 +14,7 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import androidx.navigation.NavController
+import org.moeen.basics.Components.BackButton
 
 @Composable
 fun RainbowText(navController: NavController) {
@@ -47,12 +48,7 @@ fun RainbowText(navController: NavController) {
             }
         )
     }
-    Button(
-        onClick = {navController.popBackStack()},
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        Text(text = "← Back to Home")
-    }
+      BackButton(navController)
 
 
 }

@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.navigation.NavController
 import org.moeen.basics.Navigation.Routes
+import org.moeen.basics.Components.BackButton
 
 
 @Composable
@@ -57,12 +58,7 @@ fun BorderOutlined(navController: NavController) {
         )
 
     }
-    Button(
-        onClick = {navController.popBackStack()},
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        Text(text = "← Back to Home")
-    }
+      BackButton(navController)
 
 }
 

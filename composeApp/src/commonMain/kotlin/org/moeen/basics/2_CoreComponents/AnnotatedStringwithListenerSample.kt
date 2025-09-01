@@ -16,6 +16,7 @@ import androidx.compose.ui.text.TextLinkStyles
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withLink
 import androidx.navigation.NavController
+import org.moeen.basics.Components.BackButton
 
 @Composable
 fun AnnotatedStringwithListenerSample(navController: NavController){
@@ -56,12 +57,7 @@ fun AnnotatedStringwithListenerSample(navController: NavController){
 
         )
     }
-    Button(
-        onClick = {navController.popBackStack()},
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        Text(text = "← Back to Home")
-    }
+      BackButton(navController)
 
 
 }
